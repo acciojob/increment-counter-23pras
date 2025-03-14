@@ -1,8 +1,16 @@
 // Initial counter value
 let count = 0;
 
-// Function to increment the counter
+// Get the button and counter elements
+const counter = document.getElementById('counter');
+const incrementBtn = document.getElementById('incrementBtn');
+
+// Function to handle increment
 function incrementCounter() {
-  count++; // Increase the count by 1
-  document.getElementById('counter').innerText = count; // Update the DOM
+  alert(`Current value before increment: ${count}`); // Show alert with un-incremented value
+  count++; // Increment the value
+  counter.innerText = count; // Update the counter value in the DOM
 }
+
+// Add event listener to the button
+incrementBtn.addEventListener('click', incrementCounter);
